@@ -21,8 +21,8 @@ const routes = [
   },
   { path: "/login", name: "login", component: LoginView },
   { path: "/logout", name: "logout", component: LogoutView },
-  { path: "/student", name: "student", component: StudentPortalView },
-  { path: "/student/:id/edit", name: "student-edit", component: StudentUpdateView },
+  { path: "/students/:id", name: "student-show", component: StudentPortalView },
+  { path: "/students/:id/edit", name: "student-edit", component: StudentUpdateView },
 ];
 
 const router = createRouter({
