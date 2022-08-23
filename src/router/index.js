@@ -3,6 +3,7 @@ import HomeView from "../views/HomeView.vue";
 import LoginView from "../views/LoginView.vue";
 import LogoutView from "../views/LogoutView.vue";
 import StudentPortalView from "../views/StudentPortalView.vue";
+import StudentUpdateView from "../views/StudentUpdateView.vue";
 
 const routes = [
   {
@@ -21,6 +22,7 @@ const routes = [
   { path: "/login", name: "login", component: LoginView },
   { path: "/logout", name: "logout", component: LogoutView },
   { path: "/student", name: "student", component: StudentPortalView },
+  { path: "/student/:id/edit", name: "student-edit", component: StudentUpdateView },
 ];
 
 const router = createRouter({
