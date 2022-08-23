@@ -1,5 +1,5 @@
 <template>
   <div class="about">
-    <h1>Hello!! This is Michael's change for the pull request test!</h1>
+    <h1>Hey there! This is Gina's test message</h1>
   </div>
 </template>
