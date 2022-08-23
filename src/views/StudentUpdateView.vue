@@ -37,5 +37,15 @@ export default {
 </script>
 
 <template>
-  <h1>Edit Student Info</h1>
+  <div>
+    <h1>Edit Student Info</h1>
+    <form v-on:submit.prevent="editStudent()">
+      <ul>
+        <li v-for="error in errors" v-bind:key="error">
+          {{ error }}
+        </li>
+      </ul>
+      <div>First Name:</div>
+    </form>
+  </div>
 </template>
