@@ -4,6 +4,7 @@ import LoginView from "../views/LoginView.vue";
 import LogoutView from "../views/LogoutView.vue";
 import StudentPortalView from "../views/StudentPortalView.vue";
 import StudentUpdateView from "../views/StudentUpdateView.vue";
+import CapstoneView from "../views/CapstoneView.vue";
 
 const routes = [
   {
@@ -23,6 +24,7 @@ const routes = [
   { path: "/logout", name: "logout", component: LogoutView },
   { path: "/students/:id", name: "student-show", component: StudentPortalView },
   { path: "/students/:id/edit", name: "student-edit", component: StudentUpdateView },
+  { path: "/students/:id/capstone", name: "capstone-show", component: CapstoneView },
 ];
 
 const router = createRouter({
