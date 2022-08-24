@@ -41,7 +41,7 @@ export default {
         <h3>Portfolio</h3>
         <p>Personal Website: {{ student.personal_blog_url }}</p>
         <p>Resume: {{ student.online_resume_url }}</p>
-        <a v-bind:href="`/projects/${student.id}`" class="btn btn-primary">Projects</a>
+        <a v-bind:href="`/students/:id/projects`" class="btn btn-primary">Projects</a>
       </div>
       <div>
         <h3>Social Media</h3>
