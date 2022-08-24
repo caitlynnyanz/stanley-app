@@ -5,6 +5,7 @@ import LogoutView from "../views/LogoutView.vue";
 import StudentPortalView from "../views/StudentPortalView.vue";
 import StudentUpdateView from "../views/StudentUpdateView.vue";
 import CapstoneView from "../views/CapstoneView.vue";
+// import CapstoneUpdate from "../views/CapstoneUpdate.vue";
 
 const routes = [
   {

@@ -41,6 +41,7 @@ export default {
         <h3>Portfolio</h3>
         <p>Personal Website: {{ student.personal_blog_url }}</p>
         <p>Resume: {{ student.online_resume_url }}</p>
+        <a v-bind:href="`/projects/${student.id}`" class="btn btn-primary">Projects</a>
       </div>
       <div>
         <h3>Social Media</h3>
@@ -48,6 +49,34 @@ export default {
         <p>Twitter: {{ student.twitter_handle }}</p>
         <p>Github: {{ student.github_url }}</p>
       </div>
+    </div>
+  </div>
+  <div class="container">
+    <div>
+      <h3>Experience</h3>
+      <div v-for="experience in student.experience" v-bind:key="experience.id">
+        <p>Job Title: {{ experience.job_title }}</p>
+        <p>Company Name: {{ experience.company_name }}</p>
+        <p>Start/End Date: {{ experience.start_date }}{{ experience.end_date }}</p>
+        <p>Description: {{ experience.details }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div>
+      <h3>Education</h3>
+      <div v-for="education in student.education" v-bind:key="education.id">
+        <p>Degree: {{ education.degree }}</p>
+        <p>University: {{ education.university_name }}</p>
+        <p>Start/End Date: {{ education.start_date }}{{ education.end_date }}</p>
+        <p>Description: {{ education.details }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div>
+      <h3>Skills</h3>
+      <div v-for="skill in student.skills" v-bind:key="skill.id"></div>
     </div>
   </div>
 </template>
