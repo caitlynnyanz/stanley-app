@@ -54,7 +54,7 @@ export default {
   <div class="container">
     <div>
       <h3>Experience</h3>
-      <div v-for="experience in student.experience" v-bind:key="student.id">
+      <div v-for="experience in student.experience" v-bind:key="experience.id">
         <p>Job Title: {{ experience.job_title }}</p>
         <p>Company Name: {{ experience.company_name }}</p>
         <p>Start/End Date: {{ experience.start_date }}{{ experience.end_date }}</p>
@@ -65,7 +65,7 @@ export default {
   <div class="container">
     <div>
       <h3>Education</h3>
-      <div v-for="education in student.education" v-bind:key="student.id">
+      <div v-for="education in student.education" v-bind:key="education.id">
         <p>Degree: {{ education.degree }}</p>
         <p>University: {{ education.university_name }}</p>
         <p>Start/End Date: {{ education.start_date }}{{ education.end_date }}</p>
@@ -76,7 +76,7 @@ export default {
   <div class="container">
     <div>
       <h3>Skills</h3>
-      <div v-for="skill in student.skills" v-bind:key="student.id"></div>
+      <div v-for="skill in student.skills" v-bind:key="skill.id"></div>
     </div>
   </div>
 </template>
