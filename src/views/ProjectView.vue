@@ -4,17 +4,17 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      capstone: {},
+      project: {},
     };
   },
   created: function () {
-    this.showCapstone();
+    this.showProject();
   },
   methods: {
-    showCapstone: function () {
-      axios.get("/capstones/" + this.$route.params.id + ".json").then((response) => {
-        this.capstone = response.data;
-        console.log("One capstone: ", response.data);
+    showProject: function () {
+      axios.get("/projects/" + this.$route.params.id + ".json").then((response) => {
+        this.project = response.data;
+        console.log("One project: ", response.data);
       });
     },
   },
@@ -22,7 +22,7 @@ export default {
 </script>
 
 <template>
-  <div class="capstone">
+  <div class="project">
     <div>
       <h1>{{ student.first_name }}{{ student.last_name }}</h1>
       <h2>Description</h2>
