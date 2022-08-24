@@ -5,6 +5,9 @@ export default {
   data: function () {
     return {
       student: {},
+      education: {},
+      experience: {},
+      skill: {},
       errors: [],
     };
   },
@@ -122,47 +125,47 @@ export default {
         <input type="submit" value="Update Student Info" class="btn btn-primary" />
       </form>
     </div>
-    <div class="infoedit">
-      <h2>Edit Student Experience Info</h2>
-      <form v-on:submit.prevent="editStudent()">
-        <ul>
-          <li v-for="error in errors" v-bind:key="error">
-            {{ error }}
-          </li>
-        </ul>
-        <div>
-          Company Name:
-          <input type="text" v-model="experience.company_name" />
-        </div>
-        <div>
-          Start Date:
-          <input type="text" v-model="experience.start_Date" />
-        </div>
-        <div>
-          End Date:
-          <input type="text" v-model="experience.end_date" />
-        </div>
-        <div>
-          Details:
-          <input type="text" v-model="experience.details" />
-        </div>
-        <input type="submit" value="Update Student Info" class="btn btn-primary" />
-      </form>
-    </div>
-    <div class="infoedit">
-      <h2>Edit Student Skills</h2>
-      <form v-on:submit.prevent="editStudent()">
-        <ul>
-          <li v-for="error in errors" v-bind:key="error">
-            {{ error }}
-          </li>
-        </ul>
-        <div>
-          Skill:
-          <input type="text" v-model="skill.skills_name" />
-        </div>
-        <input type="submit" value="Update Student Info" class="btn btn-primary" />
-      </form>
-    </div>
+  </div>
+  <div class="infoedit">
+    <h2>Edit Student Experience Info</h2>
+    <form v-on:submit.prevent="editStudent()">
+      <ul>
+        <li v-for="error in errors" v-bind:key="error">
+          {{ error }}
+        </li>
+      </ul>
+      <div>
+        Company Name:
+        <input type="text" v-model="experience.company_name" />
+      </div>
+      <div>
+        Start Date:
+        <input type="text" v-model="experience.start_Date" />
+      </div>
+      <div>
+        End Date:
+        <input type="text" v-model="experience.end_date" />
+      </div>
+      <div>
+        Details:
+        <input type="text" v-model="experience.details" />
+      </div>
+      <input type="submit" value="Update Student Info" class="btn btn-primary" />
+    </form>
+  </div>
+  <div class="infoedit">
+    <h2>Edit Student Skills</h2>
+    <form v-on:submit.prevent="editStudent()">
+      <ul>
+        <li v-for="error in errors" v-bind:key="error">
+          {{ error }}
+        </li>
+      </ul>
+      <div>
+        Skill:
+        <input type="text" v-model="skill.skills_name" />
+      </div>
+      <input type="submit" value="Update Student Info" class="btn btn-primary" />
+    </form>
   </div>
 </template>
