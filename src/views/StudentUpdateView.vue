@@ -122,5 +122,32 @@ export default {
         <input type="submit" value="Update Student Info" class="btn btn-primary" />
       </form>
     </div>
+    <div class="infoedit">
+      <h2>Edit Student Experience Info</h2>
+      <form v-on:submit.prevent="editStudent()">
+        <ul>
+          <li v-for="error in errors" v-bind:key="error">
+            {{ error }}
+          </li>
+        </ul>
+        <div>
+          Company Name:
+          <input type="text" v-model="student.experience.company_name" />
+        </div>
+        <div>
+          Start Date:
+          <input type="text" v-model="student.experience.start_Date" />
+        </div>
+        <div>
+          End Date:
+          <input type="text" v-model="student.experience.end_date" />
+        </div>
+        <div>
+          Details:
+          <input type="text" v-model="student.experience.details" />
+        </div>
+        <input type="submit" value="Update Student Info" class="btn btn-primary" />
+      </form>
+    </div>
   </div>
 </template>
