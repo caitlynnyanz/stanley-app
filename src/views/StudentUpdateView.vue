@@ -101,23 +101,23 @@ export default {
         </ul>
         <div>
           University Name:
-          <input type="text" v-model="student.education.university_name" />
+          <input type="text" v-model="education.university_name" />
         </div>
         <div>
           Degree:
-          <input type="text" v-model="student.education.degree" />
+          <input type="text" v-model="education.degree" />
         </div>
         <div>
           Start Date:
-          <input type="text" v-model="student.education.start_date" />
+          <input type="text" v-model="education.start_date" />
         </div>
         <div>
           End Date:
-          <input type="text" v-model="student.education.end_date" />
+          <input type="text" v-model="education.end_date" />
         </div>
         <div>
           Details:
-          <input type="text" v-model="student.education.details" />
+          <input type="text" v-model="education.details" />
         </div>
         <input type="submit" value="Update Student Info" class="btn btn-primary" />
       </form>
@@ -132,19 +132,34 @@ export default {
         </ul>
         <div>
           Company Name:
-          <input type="text" v-model="student.experience.company_name" />
+          <input type="text" v-model="experience.company_name" />
         </div>
         <div>
           Start Date:
-          <input type="text" v-model="student.experience.start_Date" />
+          <input type="text" v-model="experience.start_Date" />
         </div>
         <div>
           End Date:
-          <input type="text" v-model="student.experience.end_date" />
+          <input type="text" v-model="experience.end_date" />
         </div>
         <div>
           Details:
-          <input type="text" v-model="student.experience.details" />
+          <input type="text" v-model="experience.details" />
+        </div>
+        <input type="submit" value="Update Student Info" class="btn btn-primary" />
+      </form>
+    </div>
+    <div class="infoedit">
+      <h2>Edit Student Skills</h2>
+      <form v-on:submit.prevent="editStudent()">
+        <ul>
+          <li v-for="error in errors" v-bind:key="error">
+            {{ error }}
+          </li>
+        </ul>
+        <div>
+          Skill:
+          <input type="text" v-model="skill.skills_name" />
         </div>
         <input type="submit" value="Update Student Info" class="btn btn-primary" />
       </form>
