@@ -4,7 +4,7 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      project: {},
+      student: {},
     };
   },
   created: function () {
@@ -13,7 +13,7 @@ export default {
   methods: {
     showProject: function () {
       axios.get("/projects/" + this.$route.params.id + ".json").then((response) => {
-        this.project = response.data;
+        this.student = response.data;
         console.log("One project: ", response.data);
       });
     },
@@ -22,13 +22,19 @@ export default {
 </script>
 
 <template>
-  <div class="project">
-    <div>
-      <h1>{{ student.first_name }}{{ student.last_name }}</h1>
-      <h2>Description</h2>
-      <p>Description: {{ student.description }}</p>
-      <p>URL: {{ student.url }}</p>
-      <img v-bind:src="student.screenshot" />
+  <div class="container">
+    <h2>Projects</h2>
+    <div v-for="capstone in student.capstone" v-bind:key="capstone.id">
+      <img v-bind:src="student.url" />
+      <h3>{{ capstone.name }}</h3>
+      <p>Description: {{ capstone.description }}</p>
+      <a v-bind:src="capstone.url" class="btn btn-secondary">Demo</a>
     </div>
   </div>
 </template>
+
+<style scoped>
+.container {
+  background-color: rgb(239, 239, 239);
+}
+</style>
