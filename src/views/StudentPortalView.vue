@@ -78,5 +78,12 @@ export default {
       <h3>Skills</h3>
       <div v-for="skill in student.skills" v-bind:key="skill.id"></div>
     </div>
+    <a v-bind:href="`/students/:id/edit`" class="btn btn-primary">Edit Info</a>
   </div>
 </template>
+
+<style scoped>
+.container {
+  background-color: rgb(239, 239, 239);
+}
+</style>

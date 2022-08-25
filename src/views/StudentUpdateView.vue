@@ -172,3 +172,9 @@ export default {
     </div>
   </div>
 </template>
+
+<style scoped>
+.container {
+  background-color: rgb(239, 239, 239);
+}
+</style>
