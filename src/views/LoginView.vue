@@ -29,7 +29,7 @@ export default {
 </script>
 
 <template>
-  <div class="login">
+  <div class="container">
     <form v-on:submit.prevent="submit()">
       <h1>Login</h1>
       <ul>
@@ -37,13 +37,21 @@ export default {
       </ul>
       <div>
         <label>Email:</label>
+        <br />
         <input type="email" v-model="newSessionParams.email" />
       </div>
       <div>
         <label>Password:</label>
+        <br />
         <input type="password" v-model="newSessionParams.password" />
       </div>
-      <input type="submit" value="Submit" />
+      <input type="submit" class="btn btn-primary" value="Submit" />
     </form>
   </div>
 </template>
+
+<style scoped>
+.container {
+  background-color: rgb(239, 239, 239);
+}
+</style>

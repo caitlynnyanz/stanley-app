@@ -36,7 +36,7 @@ export default {
 
 <template>
   <div>
-    <div class="infoedit">
+    <div class="container">
       <h2>Edit Student Info</h2>
       <form v-on:submit.prevent="editStudent()">
         <ul>
