@@ -36,7 +36,7 @@ export default {
 
 <template>
   <div>
-    <div class="infoedit">
+    <div class="container">
       <h2>Edit Student Info</h2>
       <form v-on:submit.prevent="editStudent()">
         <ul>
@@ -91,7 +91,7 @@ export default {
         <input type="submit" value="Update Student Info" class="btn btn-primary" />
       </form>
     </div>
-    <div class="infoedit">
+    <!-- <div class="container">
       <div v-for="experience in student.experience" v-bind:key="experience.id">
         <h2>Edit Student Experience Info</h2>
         <form v-on:submit.prevent="editStudent()">
@@ -120,7 +120,7 @@ export default {
         </form>
       </div>
     </div>
-    <div class="infoedit">
+    <div class="container">
       <div v-for="education in student.education" v-bind:key="education.id">
         <h2>Edit Student Education Info</h2>
         <form v-on:submit.prevent="editStudent()">
@@ -153,9 +153,8 @@ export default {
         </form>
       </div>
     </div>
-  </div>
-  <div class="infoedit">
-    <div v-for="skill in student.skills" v-bind:key="skill.id">
+  </div> -->
+    <div class="container">
       <h2>Edit Student Skills</h2>
       <form v-on:submit.prevent="editStudent()">
         <ul>
@@ -165,7 +164,7 @@ export default {
         </ul>
         <div>
           Skill:
-          <input type="text" v-model="skill.skills_name" />
+          <input type="text" v-model="student.skills.skills_name" />
         </div>
         <input type="submit" value="Update Student Info" class="btn btn-primary" />
       </form>
